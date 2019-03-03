@@ -19,7 +19,7 @@ If the response is not the expected one the server sends to the client the follo
 The commands that you can give to the server from the different clients(sometimes referred in the comments as terminals) are as follows:
 
 1.  
-  - __login <cardNumber> <pin>__
+  - __login cardNumber pin__
   - cardNumber should be a valid one if not the server will return the "-4" error code.
   - If the pin is wrong the server will return the "-3" error code.
   - If the client inputs the wrong pin 3 times in a row on the same account the server locks the card and return the "-5" error code, even if the correct pin in inputted.
@@ -32,7 +32,7 @@ The commands that you can give to the server from the different clients(sometime
   - __listbalance__
   - For the operation to work the client needs to be logged in, otherwise the server will return "-1" error code.
 4.  
-  - __transfer <cardNumberWhereToTransfer> <sum>__
+  - __transfer cardNumberWhereToTransfer sum__
   - cardNumberWhereToTransfer should be a valid one if not the server will return the "-4" error code.
   - If there are enough funds from the account that initializes the transfer the server will ask for a confirmation, other wise the server will return the "-8" error code.
   - __<[y/n]response>__
@@ -41,7 +41,7 @@ The commands that you can give to the server from the different clients(sometime
   - __unlock__
   - The server receives "unlock <cardNumber>" the cardNumber being the last cardNumber entered on said terminal.
   - If the card is not locked the server returns the "-6" error code.
-  - __<secretPassword>__
+  - __secretPassword__
   - The server receives "<cardNumber> <secretPassword>" the cardNumber being the last cardNumber entered on said terminal.
   - If the secretPassword is the correct one the server unlocks the cardNumber, otherwise the server returns the "-7" error code and resets the unlock attempt.
 6.  
