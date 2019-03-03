@@ -55,9 +55,6 @@ _N_ - the number of clients in that file
 _firstName_ _lastName_ _cardNumber_ _pin_ _secretPassword_ _balance_ - client information
 
 ```bash
-cd ./link_emulator
-make
-cd ../
 make
 ./server <port_server> <user_data_file>
 
